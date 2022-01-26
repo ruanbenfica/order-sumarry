@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--pale-blue);
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    height: 100%;
+    width: 55%;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 20px -4px #000000;
+}
+
+.card header img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.before-image {
+    padding: 20px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.text h2 {
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.before-image .text p {
+    width: 70%;
+    margin-top: 0;
+    font-size: 14px;
+    color: var(--desaturated-blue);
+}
+
+.plan-price {
+    height: 70px;
+    background-color: var(--very-pale-blue);
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.plan-price .music-and-price {
+    display: flex;
+}
+
+.plan-price .price {
+    margin-left: 15px;
+}
+
+.plan-price .price #annual-price {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.plan-price .price #cost-price {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 5px;
+    color: var(--desaturated-blue);
+}
+
+.plan-price p {
+    margin: 2px;
+}
+
+#change a {
+    color: var(--desaturated-blue);
+    transition: 0.5s;
+}
+
+#change a:hover {
+    text-decoration: none;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    margin-top: 10px;
+}
+
+.payment .process {
+    border-radius: 8px;
+    height: 50px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 900;
+    transition: 0.7s;
+}
+
+.payment .process:hover {
+    background-color: var(--desaturated-blue);
+    transform: scale(1.02);
+}
+
+.payment .cancel {
+    border: none;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #6b6b6b;
+    font-size: 14px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.payment .cancel:hover {
+    color: #000000;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 70%;
+    }
+    .card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 80%;
+    }
+    .card {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+    .card {
+        width: 90%;
+    }
+    #change a {
+        font-size: 12px;
+        margin-left: 3px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        width: 95%;
+    }
+}
